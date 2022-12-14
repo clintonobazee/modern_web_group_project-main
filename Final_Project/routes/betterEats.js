@@ -138,6 +138,9 @@ router.post("/delete/:id", ensureAuthenticated, function(req,res){
 router.post("/delete/:id", function(req,res){
 
 })
+router.get("/popRestaurants", ensureAuthenticated, function(req,res){
+    res.render(popRestaurant)
+        })
 
 function ensureAuthenticated(req, res, next) {
     if (req.isAuthenticated()) {
